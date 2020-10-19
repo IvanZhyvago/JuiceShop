@@ -1,4 +1,4 @@
-package io.ctdev.checkActionsWithProducts;
+package io.ctdev.tests.checkActionsWithProducts;
 
 import io.ctdev.config.TestConfig;
 import io.ctdev.driver.WebDriverSingleton;

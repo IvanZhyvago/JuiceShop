@@ -4,4 +4,5 @@
 *.iml
 *.target/
 *.idea
+*.ccs_and_xpath_query/
 /juiceShop.iml
