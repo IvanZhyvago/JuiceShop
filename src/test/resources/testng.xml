@@ -3,6 +3,8 @@
 <suite name="Regression Suite" verbose="1" configfailurepolicy="continue" parallel="classes" thread-count="1">
     <test name="Regression" >
         <classes>
+            <class name="io.ctdev.tests.sign_up.EmailValidationTest"/>
+            <class name="io.ctdev.tests.sign_up.PasswordValidationTest"/>
             <class name="io.ctdev.tests.sign_up.PasswordAdviceValidationTest"/>
         </classes>
     </test>

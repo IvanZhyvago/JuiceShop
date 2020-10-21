@@ -2,7 +2,7 @@
 /shelf/
 /workspace.xml
 *.iml
-*.target/
+/target/
 *.idea
 *.ccs_and_xpath_query/
 /juiceShop.iml

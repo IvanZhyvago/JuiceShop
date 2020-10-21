@@ -12,11 +12,11 @@ import org.testng.annotations.BeforeSuite;
 
 public class SetData {
 
-    protected WebDriver driver;
-    protected WebDriverWait driverWait;
-    protected HomePage homePage;
-    protected LoginPage loginPage;
-    protected SignUpPage signUpPage;
+    protected static WebDriver driver;
+    protected static WebDriverWait driverWait;
+    protected static HomePage homePage;
+    protected static LoginPage loginPage;
+    protected static SignUpPage signUpPage;
 
 
 
@@ -40,6 +40,7 @@ public class SetData {
     }
 
     @AfterSuite
+
     public void afterSuite () {
         WebDriverSingleton.closeDriver();
     }

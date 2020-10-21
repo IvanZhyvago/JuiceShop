@@ -17,6 +17,7 @@ public class EmailValidationTest extends SetData {
     private String emailAddress6 = "wizdmak";
 
     @BeforeMethod
+
     public void clearFields() {
         signUpPage.clearEmailField();
     }
