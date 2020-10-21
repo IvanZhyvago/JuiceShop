@@ -44,7 +44,7 @@ public class WebDriverSingleton {
                     if (TestConfig.cfg.remote()) {
                         System.out.println("Test running remotely");
                         try {
-                            driver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.firefox()));
+                            driver.set(new RemoteWebDriver(new URL("http://3.18.213.48:4444/wd/hub"), DesiredCapabilities.firefox()));
                         } catch (MalformedURLException e) {
                             e.printStackTrace();
                         }
