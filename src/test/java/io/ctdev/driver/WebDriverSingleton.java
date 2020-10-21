@@ -44,7 +44,11 @@ public class WebDriverSingleton {
                     if (TestConfig.cfg.remote()) {
                         System.out.println("Test running remotely");
                         try {
-                            driver.set(new RemoteWebDriver(new URL("http://3.18.213.48:4444/wd/hub"), DesiredCapabilities.firefox()));
+                            DesiredCapabilities capabilities = new DesiredCapabilities();
+                            capabilities.setCapability("browserName", "chrome");
+                            capabilities.setCapability("browserVersion", "85.0");
+                            capabilities.setCapability("enableVnc", true);
+                            driver.set(new RemoteWebDriver(new URL("http://3.18.213.48:4444/wd/hub"), capabilities));
                         } catch (MalformedURLException e) {
                             e.printStackTrace();
                         }
