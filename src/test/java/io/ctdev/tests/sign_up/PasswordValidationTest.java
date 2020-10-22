@@ -1,11 +1,14 @@
 package io.ctdev.tests.sign_up;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Story;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-
+@Epic("SignUp")
+@Story("Password Validation")
 public class PasswordValidationTest extends SetData {
 
     private String actualResult;

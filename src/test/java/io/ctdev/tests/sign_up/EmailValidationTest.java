@@ -1,10 +1,14 @@
 package io.ctdev.tests.sign_up;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Story;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+@Epic("SignUp")
+@Story("Email Validation")
 public class EmailValidationTest extends SetData {
     private String actualResult;
     private String expectedResult = "Email address is not valid.";
@@ -29,35 +33,35 @@ public class EmailValidationTest extends SetData {
         Assert.assertEquals(actualResult, expectedResult, "Email validation Fail -> " + emailAddress1);
     }
 
-    @Test()
+    @Test
     public void checkOnlyRightPartEmailValidation() {
         signUpPage.enterEmail(emailAddress2).sendKeysFromKeyboardToEmailField(Keys.TAB);
         actualResult = signUpPage.getCurrentEmailError();
         Assert.assertEquals(actualResult, expectedResult, "Email validation Fail -> " + emailAddress2);
     }
 
-    @Test()
+    @Test
     public void checkCyrillicEmailValidation() {
         signUpPage.enterEmail(emailAddress3).sendKeysFromKeyboardToEmailField(Keys.TAB);
         actualResult = signUpPage.getCurrentEmailError();
         Assert.assertEquals(actualResult, expectedResult, "Email validation Fail -> " + emailAddress3);
     }
 
-    @Test()
+    @Test
     public void checkDoubleAtEmailValidation() {
         signUpPage.enterEmail(emailAddress4).sendKeysFromKeyboardToEmailField(Keys.TAB);
         actualResult = signUpPage.getCurrentEmailError();
         Assert.assertEquals(actualResult, expectedResult, "Email validation Fail -> " + emailAddress4);
     }
 
-    @Test()
+    @Test
     public void checkSpecialSymbolsEmailValidation() {
         signUpPage.enterEmail(emailAddress5).sendKeysFromKeyboardToEmailField(Keys.TAB);
         actualResult = signUpPage.getCurrentEmailError();
         Assert.assertEquals(actualResult, expectedResult, "Email validation Fail -> " + emailAddress5);
     }
 
-    @Test()
+    @Test
     public void checkOnlyFirstPartEmailValidation() {
         signUpPage.enterEmail(emailAddress6).sendKeysFromKeyboardToEmailField(Keys.TAB);
         actualResult = signUpPage.getCurrentEmailError();

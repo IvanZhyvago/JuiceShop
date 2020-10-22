@@ -1,5 +1,7 @@
 package io.ctdev.tests.sign_up;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Story;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -8,6 +10,8 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 //@Listeners(UniversalVideoListener.class)
+@Epic("SignUp")
+@Story("Password Advice Validation")
 public class PasswordAdviceValidationTest extends SetData {
 
 
